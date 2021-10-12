@@ -11,6 +11,22 @@ public class MealTo {
 
     private final boolean excess;
 
+    public String getDateTime() {
+        return dateTime.toString().replace('T',' ');
+    }
+
+    public boolean getExcess() {
+        return excess;
+    }
+
+    public int getCalories() {
+        return calories;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
     public MealTo(LocalDateTime dateTime, String description, int calories, boolean excess) {
         this.dateTime = dateTime;
         this.description = description;
