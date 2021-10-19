@@ -6,13 +6,13 @@ import java.util.Collection;
 
 public interface MealRepository {
     // null if updated meal do not belong to userId
-    Meal save(Meal meal);
+    Meal save(Meal meal, int authUserId);
 
     // false if meal do not belong to userId
-    boolean delete(int id);
+    boolean delete(int id, int authUserId);
 
     // null if meal do not belong to userId
-    Meal get(int id);
+    Meal get(int id, int authUserId);
 
     // ORDERED dateTime desc
     Collection<Meal> getAll();
