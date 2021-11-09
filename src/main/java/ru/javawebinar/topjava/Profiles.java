@@ -25,5 +25,7 @@ public class Profiles {
         }
     }
 
-
+    public static String[] getActiveProfiles(String repositoryImpl) {
+        return new String[] { getActiveDbProfile(), repositoryImpl };
+    }
 }
