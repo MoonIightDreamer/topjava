@@ -1,4 +1,4 @@
-package ru.javawebinar.topjava.service.tests.meal;
+package ru.javawebinar.topjava.service;
 
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -37,6 +37,7 @@ import static ru.javawebinar.topjava.UserTestData.USER_ID;
 })
 @RunWith(SpringRunner.class)
 @Sql(scripts = "classpath:db/populateDB.sql", config = @SqlConfig(encoding = "UTF-8"))
+@ActiveProfiles(resolver = ActiveDbProfileResolver.class)
 public abstract class MealServiceTest extends CommonServiceTest {
 
     @Autowired

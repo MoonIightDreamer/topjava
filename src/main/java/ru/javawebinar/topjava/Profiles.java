@@ -24,8 +24,4 @@ public class Profiles {
             throw new IllegalStateException("Could not find DB driver");
         }
     }
-
-    public static String[] getActiveProfiles(String repositoryImpl) {
-        return new String[] { getActiveDbProfile(), repositoryImpl };
-    }
 }
