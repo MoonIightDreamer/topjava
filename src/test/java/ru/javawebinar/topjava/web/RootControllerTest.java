@@ -13,12 +13,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
-import static ru.javawebinar.topjava.MealTestData.MEAL_MATCHER;
 import static ru.javawebinar.topjava.MealTestData.meals;
 import static ru.javawebinar.topjava.UserTestData.USER_MATCHER;
 import static ru.javawebinar.topjava.UserTestData.admin;
 import static ru.javawebinar.topjava.UserTestData.user;
-import static ru.javawebinar.topjava.web.SecurityUtil.authUserCaloriesPerDay;
 
 class RootControllerTest extends AbstractControllerTest {
 

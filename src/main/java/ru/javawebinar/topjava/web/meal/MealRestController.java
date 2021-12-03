@@ -20,7 +20,9 @@ public class MealRestController extends AbstractMealController {
 
     @Override
     @GetMapping
-    public List<MealTo> getAll() { return super.getAll(); }
+    public List<MealTo> getAll() {
+        return super.getAll();
+        }
 
     @Override
     @GetMapping("/{id}")
@@ -51,8 +53,8 @@ public class MealRestController extends AbstractMealController {
         super.update(meal, id);
     }
 
-    @GetMapping("/?from={startDate}&to={endDate}")
-    public List<MealTo> getBetween(@PathVariable LocalDateTime startDate, @PathVariable LocalDateTime endDate) {
+    @GetMapping("/filter")
+    public List<MealTo> getBetween(@RequestParam LocalDateTime startDate, @RequestParam LocalDateTime endDate) {
         return super.getBetween(startDate.toLocalDate(),
                                 startDate.toLocalTime(),
                                 endDate.toLocalDate(),
